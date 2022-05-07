@@ -2,7 +2,9 @@ import { Router } from "express";
 
 import { signin, signup } from "../controllers/authenticationController";
 
-const router = Router();
+const authenticationRouter = Router();
 
-router.post("/signin", signin);
-router.post("/singup", signup);
+authenticationRouter.post("/signin", signin);
+authenticationRouter.post("/singup", signup);
+
+export default authenticationRouter;
