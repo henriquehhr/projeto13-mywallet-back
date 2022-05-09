@@ -9,7 +9,6 @@ export async function registerTransaction(req, res) {
     } catch (e) {
         res.send(e);
     }
-
 }
 
 export async function getTransactions(req, res) {

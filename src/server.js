@@ -2,7 +2,7 @@ import { express, json } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 
-import authenticationRouter from "authenticationRoute";
+import authenticationRouter from "routers/authenticationRouter.js";
 
 const app = express();
 dotenv.config();
