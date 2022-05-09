@@ -27,7 +27,7 @@ export async function signin(req, res) {
                 userId: user._id,
                 token,
             });
-            res.sendStatus(200);
+            res.send(token);
         } else {
             res.sendStatus(401);
         }

@@ -5,9 +5,9 @@ import { validateUser } from "../middlewares/validateUser.js";
 
 const transactionRouter = Router();
 
-transactionRouter.use(validateUser);
+//transactionRouter.use(validateUser);
 
-transactionRouter.post("/transactions", registerTransaction);
-transactionRouter.get("/transactions", getTransactions);
+transactionRouter.post("/transactions", validateUser, registerTransaction);
+transactionRouter.get("/transactions", validateUser, getTransactions);
 
 export default transactionRouter;
