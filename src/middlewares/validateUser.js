@@ -1,8 +1,8 @@
 import { ObjectId } from "mongodb";
 
-import db from "./../database";
+import db from "./../database/index.js";
 
-export default async function validateUser(req, res, next) {
+export async function validateUser(req, res, next) {
 
     const validateTokenFormat = req.headers.authorizarion.slice(0, 7);
     if (validateTokenFormat != "Bearer ") {
